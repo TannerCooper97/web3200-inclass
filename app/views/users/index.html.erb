@@ -1,0 +1,20 @@
+<h2 class="text-center mt-5 mb-5">Users</h2>
+<div class="mb-5">
+<% @users.each do |user| %>
+<div class="p-2 mb-3 d-flex border-top border-bottom border-success justify-content-evenly align-items-center">
+    <div class="">
+        <strong>ID:</strong>
+        <%= user.id %>
+    </div>
+    <div class="">
+        <strong>Email:</strong>
+        <%= user.email %>
+    </div>
+    <div class="">
+    <% if current_user.admin? %>
+    <%= link_to 'Edit', edit_user_path(user), class: 'btn btn-primary' %>
+    <% end %>
+    </div>
+</div>
+<% end %>
+</div>

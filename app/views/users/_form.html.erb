@@ -1,9 +1,13 @@
-<div class="text-field">
-  <%= form.label :email %>
-  <%= form.email_field :email %>
-</div>
 
-<div class="password-field">
-  <%= form.label :password %>
-  <%= form.password_field :password %>
+<div class="row">
+  <div class="col-12">
+    <div class="text-field d-flex flex-column mt-4 pb-1">
+      <%= form.label :email %>
+      <%= form.email_field :email, style: "width: 100%;" %>
+    </div>
+    <div class="password-field d-flex flex-column mt-3 pb-1">
+      <%= form.label :password %>
+      <%= form.password_field :password, style: "width: 100%;" %>
+    </div>
+  </div>
 </div>
